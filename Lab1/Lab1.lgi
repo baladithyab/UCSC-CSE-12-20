@@ -1,0 +1,420 @@
+41 2 0
+38 1
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 98 44 0 \NUL
+Slug, Sammy
+22 8 96 48 76 0 \NUL
+sslug
+22 64 272 264 252 0 \NUL
+Part A Output                            
+8 216 184 265 135 1 0
+8 280 184 329 135 1 0
+8 352 184 401 135 1 0
+11 168 424 195 326 0 1
+20 264 208 323 189 0
+in_3
+20 336 208 395 189 0
+in_2
+20 408 208 467 189 0
+in_1
+8 424 184 473 135 1 0
+20 480 208 539 189 0
+in_0
+19 80 312 139 293 0
+a_3
+19 64 336 123 317 0
+a_2
+19 48 360 107 341 0
+a_1
+19 32 384 91 365 0
+a_0
+22 9 445 391 425 0 \NUL
+the 4 recievers recieve 1's and 0's as input for the display
+22 23 478 331 458 0 \NUL
+and the display shows 0 to f in hex from binary
+22 449 441 671 421 0 \NUL
+output: b_0 never turns on, b_1 is
+7 360 664 409 615 0 1
+7 360 704 409 655 0 1
+19 272 592 331 573 0
+c_2
+19 272 632 331 613 0
+c_1
+19 272 672 331 653 0
+c_0
+22 416 688 480 668 0 \NUL
+SOP/POS
+22 416 648 492 628 0 \NUL
+NAND Only
+22 416 608 484 588 0 \NUL
+NOR Only
+22 449 467 728 447 0 \NUL
+alternating between 1 and 0 so tied to in_0
+22 78 719 750 699 0 \NUL
+c_0 => solved using SOP, using Boolean Algebra the SOP method resulted in the eq: ~AC + A~B = output
+22 79 741 391 721 0 \NUL
+c_1 => expanded c_0 to using only NAND gates
+22 280 32 653 12 0 \NUL
+You are only permitted to modify or add text to this page.
+22 280 56 605 36 0 \NUL
+Your circuit must use senders and/or receivers to
+22 280 80 538 60 0 \NUL
+interface with these inputs and outputs.
+7 472 360 521 311 0 1
+7 544 360 593 311 0 1
+7 616 360 665 311 0 1
+19 416 392 475 373 0
+b_2
+19 488 392 547 373 0
+b_1
+19 560 392 619 373 0
+b_0
+7 360 624 409 575 0 1
+22 64 136 616 116 0 \NUL
+Input                                                                                                                                 
+22 448 272 650 252 0 \NUL
+Part B Output                            
+22 272 552 473 532 0 \NUL
+Part C Output                            
+22 450 493 677 473 0 \NUL
+b_2 is XOR between in_0 and in_1
+22 79 765 367 745 0 \NUL
+c_2 => expanded c_0 using only NOR gates
+1 470 159 481 198
+1 409 198 398 159
+1 337 198 326 159
+1 265 198 262 159
+1 169 390 136 302
+1 169 396 120 326
+1 169 402 104 350
+1 169 408 88 374
+1 328 622 361 639
+1 328 662 361 679
+1 472 382 473 335
+1 544 382 545 335
+1 616 382 617 335
+1 328 582 361 599
+38 2
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 98 44 0 \NUL
+Slug, Sammy
+22 8 96 48 76 0 \NUL
+sslug
+19 392 168 451 149 0
+a0
+7 448 496 497 447 0 1
+19 424 408 483 389 0
+c0
+7 496 408 545 359 0 1
+7 496 456 545 407 0 1
+7 448 376 497 327 0 1
+19 424 432 483 413 0
+c1
+19 424 288 483 269 0
+b0
+7 496 288 545 239 0 1
+7 496 336 545 287 0 1
+7 448 256 497 207 0 1
+19 424 312 483 293 0
+b1
+19 344 200 403 181 0
+a1
+7 400 496 449 447 0 1
+19 384 528 443 509 0
+d0
+19 344 504 403 485 0
+d1
+7 360 456 409 407 0 1
+19 296 456 355 437 0
+e1
+19 296 424 355 405 0
+e0
+7 360 408 409 359 0 1
+7 400 376 449 327 0 1
+7 360 336 409 287 0 1
+19 296 288 355 269 0
+f1
+19 296 248 355 229 0
+f0
+7 360 288 409 239 0 1
+7 400 256 449 207 0 1
+19 296 376 355 357 0
+g1
+19 296 344 355 325 0
+g0
+7 200 376 249 327 0 1
+7 152 376 201 327 0 1
+19 136 408 195 389 0
+h0
+19 96 384 155 365 0
+h1
+22 279 60 667 40 0 \NUL
+Your circuit must use senders to interface with these LEDs.
+22 280 32 522 12 0 \NUL
+Do not add any circuitry to this page.
+1 480 398 497 383
+1 480 422 497 431
+1 480 278 497 263
+1 449 231 448 158
+1 480 302 497 311
+1 449 471 440 518
+1 401 471 400 494
+1 352 446 361 431
+1 352 414 361 383
+1 352 278 361 311
+1 352 238 361 263
+1 401 231 400 190
+1 352 366 449 351
+1 352 334 401 351
+1 201 351 192 398
+1 153 351 152 374
+38 3
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 98 44 0 \NUL
+Slug, Sammy
+22 8 96 48 76 0 \NUL
+sslug
+19 32 216 91 197 0
+in_3
+19 32 240 91 221 0
+in_2
+19 32 264 91 245 0
+in_1
+19 32 288 91 269 0
+in_0
+22 24 600 390 580 0 \NUL
+these are only present so circuit simulates without error
+22 24 624 291 604 0 \NUL
+remove these once logic is implemented
+22 32 184 262 164 0 \NUL
+placeholder senders and receivers
+20 128 400 187 381 0
+e1
+20 128 424 187 405 0
+e0
+20 128 448 187 429 0
+f1
+20 128 472 187 453 0
+f0
+20 128 496 187 477 0
+g1
+20 128 520 187 501 0
+g0
+20 128 544 187 525 0
+h1
+20 128 568 187 549 0
+h0
+20 128 208 187 189 0
+a1
+20 128 232 187 213 0
+a0
+20 128 256 187 237 0
+b1
+20 128 280 187 261 0
+b0
+20 128 304 187 285 0
+c1
+20 128 328 187 309 0
+c0
+20 128 352 187 333 0
+d1
+20 128 376 187 357 0
+d0
+38 4
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 194 44 0 \NUL
+Balamurugan, Balamurugan
+22 8 96 73 76 0 \NUL
+bbalamur
+19 32 216 91 197 0
+in_3
+19 32 240 91 221 0
+in_2
+19 32 264 91 245 0
+in_1
+19 32 288 91 269 0
+in_0
+20 146 216 205 197 0
+a_3
+20 146 240 205 221 0
+a_2
+20 146 264 205 245 0
+a_1
+20 146 288 205 269 0
+a_0
+22 392 100 693 80 0 \NUL
+This part of the lab requires us to connect the 
+22 56 177 183 157 0 \NUL
+7-Segment Display
+22 391 123 719 103 0 \NUL
+signal senders from switches to the signal sender
+22 392 143 642 123 0 \NUL
+ that connect to the 7-segment display
+22 396 66 461 46 0 \NUL
+Objective
+22 394 183 475 163 0 \NUL
+Explanation
+22 393 208 731 188 0 \NUL
+The 7-segment display takes in 4 inputs and counts
+22 393 236 661 216 0 \NUL
+from 0 to 15 in hexadecimal digits (0 to f)
+1 147 206 88 206
+1 147 230 88 230
+1 147 254 88 254
+1 147 278 88 278
+38 5
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 177 44 0 \NUL
+Balamurugan, Baladithya
+22 8 96 73 76 0 \NUL
+bbalamur
+19 32 216 91 197 0
+in_3
+19 32 240 91 221 0
+in_2
+19 32 264 91 245 0
+in_1
+19 32 288 91 269 0
+in_0
+20 257 250 316 231 0
+b_1
+20 257 274 316 255 0
+b_0
+20 258 213 317 194 0
+b_2
+14 199 313 248 264
+35 149 228 198 179 0 0
+10 139 250 156 233 0 0
+22 392 100 693 80 0 \NUL
+This part of the lab requires us to connect the 
+22 391 123 719 103 0 \NUL
+signal senders from switches to the signal sender
+22 392 143 610 123 0 \NUL
+ so that a given truth table is true
+22 396 66 461 46 0 \NUL
+Objective
+22 394 183 475 163 0 \NUL
+Explanation
+22 393 208 695 188 0 \NUL
+according tot he truth table b_0 never turns on
+22 393 236 745 216 0 \NUL
+so it is tied to ground, then b_1 is alternating between
+22 391 289 600 269 0 \NUL
+b_2 is the XOR of in_1 and in_0
+22 394 260 643 240 0 \NUL
+1 and 0 every step so it is tied to in_0
+1 258 264 245 288
+1 88 278 258 240
+1 150 189 88 254
+1 88 278 150 217
+1 259 203 195 203
+38 6
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 177 44 0 \NUL
+Balamurugan, Baladithya
+22 8 96 73 76 0 \NUL
+bbalamur
+19 25 218 84 199 0
+in_2
+19 18 165 77 146 0
+in_1
+19 26 252 85 233 0
+in_0
+3 98 181 147 132 0 1
+3 112 234 161 185 0 1
+3 156 194 205 145 0 1
+3 175 254 224 205 0 1
+3 307 219 356 170 0 1
+20 412 526 471 507 0
+c_2
+20 380 203 439 184 0
+c_1
+20 315 339 374 320 0
+c_0
+19 25 347 84 328 0
+in_2
+19 25 371 84 352 0
+in_1
+19 25 395 84 376 0
+in_0
+19 26 564 85 545 0
+in_2
+19 26 540 85 521 0
+in_1
+19 27 510 86 491 0
+in_0
+35 151 340 200 291 0 0
+35 153 384 202 335 0 0
+4 232 357 281 308 0 0
+4 127 494 176 445 0 1
+4 130 530 179 481 0 1
+4 227 503 276 454 0 1
+4 214 582 263 533 0 1
+4 280 543 329 494 0 1
+4 354 541 403 492 0 1
+22 16 429 688 409 0 \NUL
+c_0 => solved using SOP, using Boolean Algebra the SOP method resulted in the eq: ~AC + A~B = output
+22 29 286 341 266 0 \NUL
+c_1 => expanded c_0 to using only NAND gates
+22 23 614 311 594 0 \NUL
+c_2 => expanded c_0 using only NOR gates
+22 392 100 693 80 0 \NUL
+This part of the lab requires us to connect the 
+22 393 124 721 104 0 \NUL
+signal senders from switches to the signal sender
+22 280 149 782 129 0 \NUL
+ so that a given truth table is true and a circuit to comply with the table exists
+22 396 66 461 46 0 \NUL
+Objective
+1 99 142 74 155
+1 99 170 74 155
+1 113 195 81 208
+1 113 223 81 208
+1 157 183 81 208
+1 157 155 144 156
+1 176 243 82 242
+1 176 215 158 209
+1 353 194 381 193
+1 316 329 278 332
+1 197 315 233 318
+1 199 359 233 346
+1 81 337 152 301
+1 81 337 154 345
+1 81 361 152 329
+1 81 385 154 373
+1 308 180 202 169
+1 308 208 221 229
+1 413 516 400 516
+1 326 518 355 502
+1 326 518 355 530
+1 260 557 281 532
+1 273 478 281 504
+1 82 554 228 492
+1 173 469 228 464
+1 83 500 128 483
+1 83 500 128 455
+1 82 554 131 519
+1 82 554 131 491
+1 176 505 215 543
+1 82 530 215 571
+39 16777215
+47 0
+40 1 8 8
+50 800 800
+51 1 30
+30
+System
+20
+700
+0
+0
+1
+2
+2
+34

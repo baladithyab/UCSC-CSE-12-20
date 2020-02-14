@@ -21,6 +21,12 @@ README
 
 This file summarizes the project and provides details on the project
 
+-
+Lab3.c
+
+This file is the C-lang implementation of what was asked for in the lab report.
+This was used as proof of concept and an aid in programming MIPS
+
 -----------------
 Instructions
 

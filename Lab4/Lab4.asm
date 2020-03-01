@@ -137,11 +137,7 @@ main:
 	la  $a0, newline
 	syscall
 	
-	#li $v0, 1
-	#la $a0, ($t1)
-	#syscall
-	
-	ble $t0, $s1, InvArg
+	bgt $t1, $s1, InvArg
 	
 	#li  $v0, 4
 	#la  $a0, newline
@@ -434,9 +430,6 @@ success:
 	j exit
 
 FRError:
-	li  $v0, 4
-	la  $a0, newline
-	syscall
 	
 	li  $v0, 4
 	la  $a0, newline
@@ -453,14 +446,11 @@ InvArg:
 	la  $a0, newline
 	syscall
 	
-	li  $v0, 4
-	la  $a0, newline
-	syscall
 
 	li  $v0, 4
 	la  $a0, invArg
 	syscall
-	
+
 	j exit
 
 return:

@@ -1,0 +1,17 @@
+[]()()()(here)[a[a]a][][a[b[c[d]c]b]a]()[{(hello)}]2/20/2020 7:14AM Updated the error output to include both opening and closing brace and indices to be less confusing and reduce questions. Added example for extra closing brace.
+2/20/2020 9:41AM Clarified that the stack error can only be reported if there were no brace mismatch errors in the entire file.
+2/21/2020 10:00AM You can assume there are no spaces in the command line argument file name.
+2/22/2020 6:39PM Added a penalty for submitting the MARS jar file in your repo.
+2/25/2020 5:35PM Your file index offset should be a 32-bit 2’s complement word.2/20/2020 7:14AM Updated the error output to include both opening and closing brace and indices to be less confusing and reduce questions. Added example for extra closing brace.
+2/20/2020 9:41AM Clarified that the stack error can only be reported if there were no brace mismatch errors in the entire file.
+2/21/2020 10:00AM You can assume there are no spaces in the command line argument file name.
+2/22/2020 6:39PM Added a penalty for submitting the MARS jar file in your repo.
+2/25/2020 5:35PM Your file index offset should be a 32-bit 2’s complement word.2/20/2020 7:14AM Updated the error output to include both opening and closing brace and indices to be less confusing and reduce questions. Added example for extra closing brace.
+2/20/2020 9:41AM Clarified that the stack error can only be reported if there were no brace mismatch errors in the entire file.
+2/21/2020 10:00AM You can assume there are no spaces in the command line argument file name.
+2/22/2020 6:39PM Added a penalty for submitting the MARS jar file in your repo.
+2/25/2020 5:35PM Your file index offset should be a 32-bit 2’s complement word.2/20/2020 7:14AM Updated the error output to include both opening and closing brace and indices to be less confusing and reduce questions. Added example for extra closing brace.
+2/20/2020 9:41AM Clarified that the stack error can only be reported if there were no brace mismatch errors in the entire file.
+2/21/2020 10:00AM You can assume HERE IS THE MISMATCH{e]re are no spaces in the command line argument file name.
+2/22/2020 6:39PM Added a penalty for submitting the MARS jar file in your repo.
+2/25/2020 5:35PM Your file index offset should be a 32-bit 2’s complement word.{}

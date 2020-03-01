@@ -126,6 +126,7 @@ main:
 	li  $v0, 4
 	syscall
 	
+	# filename spec checker
 	move $t0, $s0
 	jal fstNum	
 	move $t0, $s0
@@ -138,11 +139,7 @@ main:
 	syscall
 	
 	bgt $t1, $s1, InvArg
-	
-	#li  $v0, 4
-	#la  $a0, newline
-	#syscall
-	
+
 	li  $v0, 4
 	la  $a0, newline
 	syscall
@@ -152,6 +149,9 @@ main:
 	
 	j exit
 
+# REGISTER USAGE
+# $t2: brace to store on stack
+# $t8: index counter
 push:
 	subi $sp,$sp, 4
 	sw $t2, ($sp)
@@ -163,7 +163,9 @@ push:
 	sw $t9, size
 	j incrmt
 
-
+# REGISTER USAGE
+# $t9: index counter
+# $t8: brace to pop
 pop:
 	lw $t9, ($sp)
 	addi $sp,$sp, 4
@@ -174,7 +176,10 @@ pop:
 	subi $t7, $t7, 1
 	sw $t7, size
 	jr $ra
-	
+
+# REGISTER USAGE
+# $t1: first byte of filename
+# $t0: register storing the address of filename
 fstNum:
 	lb $t1, 0($t0)
 	sltiu $t2,$t1,65
@@ -189,6 +194,9 @@ fstNum:
 	bnez $t2, InvArg
 	jr $ra
 
+# REGISTER USAGE
+# $t1: counter
+# $t0: register storing the address of filename
 strlen:
 	li $t1, 0
 
@@ -199,6 +207,9 @@ lenloop:
 	addi $t1, $t1, 1
 	j lenloop
 
+# REGISTER USAGE
+# $t1: load byte
+# $t0: register storing the address of filename
 isValidloop:
 	lb $t1, 0($t0)
 	beqz $t1, return
@@ -226,6 +237,8 @@ isValidloop:
 	addi $t0, $t0, 1
 	j isValidloop
 
+# REGISTER USAGE
+# $s0: register storing the address of filename
 openFile:
 	li $v0, 13
 	la $a0, ($s0)
@@ -235,11 +248,9 @@ openFile:
 	add $s2, $v0, $0
 	jr $ra
 
+# REGISTER USAGE
+# $s2: address of opened file
 readFile:
-	#li $t0, 0
-	#li $t1, 128
-	#jal emptybuffer
-	
 	li $v0, 14
 	move $a0, $s2
 	la $a1, bfr
@@ -247,16 +258,13 @@ readFile:
 	syscall
 	li $t0, 0
 	la $s6, ($v0)
-	#li  $v0, 1
-	#la  $a0, ($s6)
-	#syscall
-	#li  $v0, 4
-	#la  $a0, newline
-	#syscall
 	beq $s6, $0, mismatch0
 	blt $s6, $0, FRError
 	j stackloop
 
+# REGISTER USAGE
+# $t0: counter
+# $t1: max
 print:
 	beq $t0, $t1, readFile
 	lb $t3, bfr($t0)
@@ -266,6 +274,9 @@ print:
 	addi $t0, $t0, 1
 	j print
 
+# REGISTER USAGE
+# $t0: counter
+# $s6: max
 stackloop:
 	beq $t0, $s6, readFile
 	lb $t2, bfr($t0)
@@ -277,7 +288,9 @@ stackloop:
 	
 	beqz $t5,popcheck
 	j push
-	
+
+# REGISTER USAGE
+# $t2: loaded byte
 popcheck:
 	seq $t4, $t2, 41
 	seq $t5, $t2, 93
@@ -295,50 +308,29 @@ incrmt:
 	sw $t9, idx
 	j stackloop
 
+# REGISTER USAGE
+# $t2: loaded byte
+# $t9: from pop
+# $t8: from pop
 poputil:
 	lw $t5, size
 	beqz $t5, mismatch1
 	jal pop
-	#li  $v0, 11
-	#la  $a0, ($t2)
-	#syscall
-	#li  $v0, 1
-	#lw  $a0, idx
-	#syscall
-	#li  $v0, 11
-	#la  $a0, ($t8)
-	#syscall
-	#li  $v0, 1
-	#la  $a0, ($t9)
-	#syscall
-	#li  $v0, 4
-	#la  $a0, newline
-	#syscall
+
 	seq $t3, $t8, 40
 	seq $t4, $t2, 41
-	#and $t5, $t3, $t4
-	
 	xor $t5, $t3, $t4
 	bnez $t5, mismatch2
 	
 	seq $t3, $t8, 91
-	seq $t4, $t2, 93
-	#and $t6, $t3, $t4
-	#or $t7, $5, $t6
-	
+	seq $t4, $t2, 93	
 	xor $t5, $t3, $t4
 	bnez $t5, mismatch2
 	
 	seq $t3, $t8, 123
-	seq $t4, $t2, 125
-	#and $t6, $t3, $t4
-	#or $t5,$t7,$t6
-	
+	seq $t4, $t2, 125	
 	xor $t5, $t3, $t4
 	bnez $t5, mismatch2
-	
-	#seq $t5, $t8, $t3
-	#beqz $t5, mismatch2
 	
 	lw $t9, count
 	addi $t9, $t9, 1
@@ -346,12 +338,6 @@ poputil:
 	
 	j incrmt
 	
-emptybuffer:
-	beq $t0, $t1, return
-	sb $0, bfr($t0)
-	addi $t0, $t0, 1
-	j emptybuffer
-
 mismatch0:
 	lw $t4, size
 	beqz $t4, success

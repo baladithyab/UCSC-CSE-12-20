@@ -25,7 +25,7 @@
 # 	if filename.len > 20 branch to InvArg
 # 	jump to openFile
 # 	jump to readFile
-3
+#
 # fstNUM:
 # 	check if the first char of the filename is 65<=char<=90 || 97<=char<=122
 # 	if neither branch to InvArg
